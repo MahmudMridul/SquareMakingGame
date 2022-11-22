@@ -184,9 +184,9 @@ const getFirstChar = ( ) => {
 }
 
 const gameSetup = ( ) => {
-    // setTableSize();
+    setTableSize();
     createTable(numOfRows, numOfCols);
-    // getPlayersName();
+    getPlayersName();
     getFirstChar();
     setPlayersName();
     addEventToCells();
