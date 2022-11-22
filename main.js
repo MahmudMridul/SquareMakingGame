@@ -131,7 +131,7 @@ const addBorderToCells = (event) => {
             addClassToCell(i, border);
             removeClassFromCell(i, 'clicked');
 
-            if(border === 'border-top' && i >= numOfCols) {
+            if(border === 'border-top' && isCellNoValid(i - numOfCols)) {
                 addClassToCell(i - numOfCols, 'border-bottom');
             }
             else if(border === 'border-bottom' && isCellNoValid(i + numOfCols)) {
@@ -144,19 +144,21 @@ const addBorderToCells = (event) => {
                 addClassToCell(i + 1, 'border-left');
             }
 
+            console.log(td[i].classList);
+
             break;
         }
     }
 }
 
 const setTableSize = ( ) => {
-    numOfRows = prompt(`Enter number of rows:`, 7);
+    numOfRows = Number(prompt(`Enter number of rows:`, 7));
     if(numOfRows > 15 || numOfRows <= 0) {
         alert('Invalid number of rows. Valid range is [1 - 15]. Setting to default (7)');
         numOfRows = 7;
     }
 
-    numOfCols = prompt(`Enter number of columns:`, 7);
+    numOfCols = Number(prompt(`Enter number of columns:`, 7));
     if(numOfCols > 15 || numOfCols <= 0) {
         alert('Invalid number of columns. Valid range is [1 - 15]. Setting to default (7)');
         numOfCols = 7;
