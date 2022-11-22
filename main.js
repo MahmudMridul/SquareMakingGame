@@ -13,8 +13,8 @@ const keys = new Map([
 
 let activePlayer = 0;
 let scores = [0, 0];
-let playerOneName = 'Nilo';
-let playerTwoName = 'Mridul';
+let playerOneName = 'POne';
+let playerTwoName = 'PTwo';
 let firstCharPOne = 'O';
 let firstCharPTwo = 'T';
 let numOfBoxes = 0;
